@@ -1,5 +1,5 @@
 //
-//  CharacterListView.swift
+//  RMCharacterListView.swift
 //  RickAndMorty
 //
 //  Created by Habip Yesilyurt on 22.01.2025.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CharacterListView: UIView {
+final class RMCharacterListView: UIView {
     
     private let viewModel = RMCharacterListViewViewModel()
     private let spinner: UIActivityIndicatorView = {
@@ -25,7 +25,7 @@ final class CharacterListView: UIView {
         collectionView.isHidden = true
         collectionView.alpha = 0
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(RMCharacterCollectionViewCell.self, forCellWithReuseIdentifier: RMCharacterCollectionViewCell.cellIdentifier)
         return collectionView
     }()
 
